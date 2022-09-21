@@ -17,7 +17,7 @@ public class Ch16writingAndReadingObjects {
         System.out.println("List 1: ");
         studentList.display();
         String fileName = "ThreeLists.txt";
-        try (ObjectOutputStream fileOut
+        try (ObjectOutputStream fileOut // write object
                 = new ObjectOutputStream(new FileOutputStream(fileName))) {
             fileOut.writeObject(studentList);
             fileOut.reset();
@@ -34,7 +34,7 @@ public class Ch16writingAndReadingObjects {
             System.out.println(e.getClass());
             System.out.println(e.getMessage());
         } // end try/catch, and close fileOut automatically
-        try (ObjectInputStream fileIn = new ObjectInputStream(
+        try (ObjectInputStream fileIn = new ObjectInputStream( // read object
                 new FileInputStream(fileName))) {
             while (true) {
                 studentList = (StudentList) fileIn.readObject();
