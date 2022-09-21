@@ -7,8 +7,9 @@
 package ch16writingandreadingobjects;
 
 import java.util.*;
+import java.io.*;
 
-public class StudentList {
+public class StudentList implements Serializable {
 
     ArrayList<String> students = new ArrayList<>();
 
@@ -30,5 +31,10 @@ public class StudentList {
 
     public void removeStudent(int index) {
         students.remove(index);
+    } // end removeStudent method
+//******************************************************************************
+
+    public void addStudent(String name) {
+        students.add(name);
     } // end removeStudent method
 } // end StudentList class
