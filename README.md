@@ -6,7 +6,7 @@ Start with the code for the StudentList class from Chapter 15 shown in Fig 15.8 
 
 Here is a sample session:
 
-Ch 16 Writing Reading Objects
+![example](https://github.com/bell-kevin/Chapter16writingAndReadingObjects/blob/main/c16-WritingReadingObjects.PNG)
 
 Note 1: Remember that there is only one StudentList object, which is being modified and then written to the file. Pay careful attention to the section on p. 721 about writing an updated version of a previously written object.
 
