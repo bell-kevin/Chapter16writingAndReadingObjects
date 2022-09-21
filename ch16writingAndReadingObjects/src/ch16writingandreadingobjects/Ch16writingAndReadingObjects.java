@@ -21,6 +21,7 @@ public class Ch16writingAndReadingObjects {
         Scanner computerKeyboardInput = new Scanner(System.in);
         System.out.print("Enter fileName: ");
         String fileName = computerKeyboardInput.nextLine();
+        System.out.println("");
         try (ObjectOutputStream fileOut
                 = new ObjectOutputStream(new FileOutputStream(fileName))) {
             fileOut.writeObject(studentList);
@@ -28,6 +29,12 @@ public class Ch16writingAndReadingObjects {
             studentList.addStudent("Anna");
             studentList.addStudent("James");
             studentList.addStudent("Noah");
+            System.out.println("List 2: added some names");
+            studentList.display();
+            studentList.removeStudent(1);
+            studentList.removeStudent(2);
+            System.out.println("List 3: removed some names");
+            studentList.display();
         } catch (Exception e) {
             System.out.println(e.getClass());
             System.out.println(e.getMessage());
