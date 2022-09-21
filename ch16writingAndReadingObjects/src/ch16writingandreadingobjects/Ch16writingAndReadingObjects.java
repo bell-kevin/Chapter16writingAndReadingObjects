@@ -17,5 +17,19 @@ public class Ch16writingAndReadingObjects {
         String[] names = {"Caleb", "Izumi", "Mary", "Usha"};
         StudentList studentList = new StudentList(names);
         studentList.display();
+//******************************************************************************
+        // write object
+        Scanner computerKeyboardInput = new Scanner(System.in);
+        System.out.print("Enter fileName: ");
+        try (ObjectOutputStream fileOut
+                = new ObjectOutputStream(new FileOutputStream(
+                        computerKeyboardInput.nextLine()))) {
+            studentList = new StudentList(names);
+            fileOut.writeObject(studentList);
+        } // end try, and close fileOut automatically
+        catch (Exception e) {
+            System.out.println(e.getClass());
+            System.out.println(e.getMessage());
+        } // end catch block
     } // end main method
 } // end Ch16writingAndReadingObjects class
