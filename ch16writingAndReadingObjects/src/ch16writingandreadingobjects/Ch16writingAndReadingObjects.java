@@ -18,8 +18,6 @@ public class Ch16writingAndReadingObjects {
         StudentList studentList = new StudentList(names);
         System.out.println("List 1: ");
         studentList.display();
-//******************************************************************************
-        // write object
         Scanner computerKeyboardInput = new Scanner(System.in);
         System.out.print("Enter fileName: ");
         String fileName = computerKeyboardInput.nextLine();
@@ -30,10 +28,9 @@ public class Ch16writingAndReadingObjects {
             studentList.addStudent("Anna");
             studentList.addStudent("James");
             studentList.addStudent("Noah");
-        } // end try, and close fileOut automatically
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println(e.getClass());
             System.out.println(e.getMessage());
-        } // end catch block
+        } // end try/catch, and close fileOut automatically
     } // end main method
 } // end Ch16writingAndReadingObjects class
