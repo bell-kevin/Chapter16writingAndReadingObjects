@@ -14,7 +14,9 @@ Note 2: When removing names from the StudentList object, you need to provide the
 
 Take a screenshot that matches the sample session.
 
- 
+# Output
+
+![output](https://github.com/bell-kevin/Chapter16writingAndReadingObjects/blob/main/saveMeNow.PNG)
 
 Submission:the specified screenshots and the root folder for the project
 
