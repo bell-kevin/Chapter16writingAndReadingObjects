@@ -37,4 +37,5 @@ public class StudentList implements Serializable {
     public void addStudent(String name) {
         students.add(name);
     } // end removeStudent method
+//******************************************************************************
 } // end StudentList class
