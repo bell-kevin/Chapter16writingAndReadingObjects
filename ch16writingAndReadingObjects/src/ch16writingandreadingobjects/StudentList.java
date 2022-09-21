@@ -12,13 +12,13 @@ public class StudentList {
 
     ArrayList<String> students = new ArrayList<>();
 
-    //**************************************************************************
+//******************************************************************************
     public StudentList(String[] names) {
         for (int i = 0; i < names.length; i++) {
             students.add(names[i]);
         } // end for loop
     } // end constructor
-    //**************************************************************************
+//******************************************************************************
 
     public void display() {
         for (int i = 0; i < students.size(); i++) {
@@ -26,7 +26,7 @@ public class StudentList {
         } // end for loop
         System.out.println();
     } // end display method
-    //**************************************************************************
+//******************************************************************************
 
     public void removeStudent(int index) {
         students.remove(index);
