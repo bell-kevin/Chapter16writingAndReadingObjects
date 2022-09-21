@@ -6,9 +6,7 @@
  **************************************************************************** */
 package ch16writingandreadingobjects;
 
-import java.util.*;
 import java.io.*;
-import java.nio.file.*;
 
 public class Ch16writingAndReadingObjects {
 
@@ -18,10 +16,7 @@ public class Ch16writingAndReadingObjects {
         StudentList studentList = new StudentList(names);
         System.out.println("List 1: ");
         studentList.display();
-        Scanner computerKeyboardInput = new Scanner(System.in);
-        System.out.print("Enter fileName: ");
-        String fileName = computerKeyboardInput.nextLine();
-        System.out.println("");
+        String fileName = "ThreeLists.txt";
         try (ObjectOutputStream fileOut
                 = new ObjectOutputStream(new FileOutputStream(fileName))) {
             fileOut.writeObject(studentList);
@@ -35,6 +30,17 @@ public class Ch16writingAndReadingObjects {
             studentList.removeStudent(2);
             System.out.println("List 3: removed some names");
             studentList.display();
+        } catch (Exception e) {
+            System.out.println(e.getClass());
+            System.out.println(e.getMessage());
+        } // end try/catch, and close fileOut automatically
+        try (ObjectInputStream fileIn = new ObjectInputStream(
+                new FileInputStream(fileName))) {
+            while (true) {
+                studentList = (StudentList) fileIn.readObject();
+                studentList.display();
+            } // end while loop
+        } catch (EOFException e) {
         } catch (Exception e) {
             System.out.println(e.getClass());
             System.out.println(e.getMessage());
