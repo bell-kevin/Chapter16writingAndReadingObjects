@@ -18,9 +18,7 @@ Take a screenshot that matches the sample session.
 
 ![output](https://github.com/bell-kevin/Chapter16writingAndReadingObjects/blob/main/saveMeNow.PNG)
 
-Submission:the specified screenshots and the root folder for the project
-
- 
+Submission: the specified screenshots and the root folder for the project
 
 Pay careful attention to the rubric for this assignment.
 
