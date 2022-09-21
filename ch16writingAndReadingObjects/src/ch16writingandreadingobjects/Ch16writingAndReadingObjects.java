@@ -42,7 +42,7 @@ public class Ch16writingAndReadingObjects {
                 System.out.println("Results of reading objects from file: ");
                 studentList.display();
             } // end while loop
-        } catch (EOFException e) {
+        } catch (EOFException e) { // terminates infinite while loop
         } catch (Exception e) {
             System.out.println(e.getClass());
             System.out.println(e.getMessage());
