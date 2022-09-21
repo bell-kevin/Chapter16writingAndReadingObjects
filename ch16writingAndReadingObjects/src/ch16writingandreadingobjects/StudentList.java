@@ -23,7 +23,7 @@ public class StudentList implements Serializable {
 
     public void display() {
         for (int i = 0; i < students.size(); i++) {
-            System.out.println(students.get(i) + " ");
+            System.out.print(students.get(i) + " ");
         } // end for loop
         System.out.println();
     } // end display method
