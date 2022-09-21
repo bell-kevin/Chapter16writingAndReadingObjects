@@ -24,10 +24,14 @@ public class Ch16writingAndReadingObjects {
             studentList.addStudent("Anna");
             studentList.addStudent("James");
             studentList.addStudent("Noah");
+            fileOut.writeObject(studentList);
+            fileOut.reset();
             System.out.println("List 2: added some names");
             studentList.display();
             studentList.removeStudent(1);
             studentList.removeStudent(2);
+            fileOut.writeObject(studentList);
+            fileOut.reset();
             System.out.println("List 3: removed some names");
             studentList.display();
         } catch (Exception e) {
@@ -36,10 +40,10 @@ public class Ch16writingAndReadingObjects {
         } // end try/catch, and close fileOut automatically
         try (ObjectInputStream fileIn = new ObjectInputStream( // read object
                 new FileInputStream(fileName))) {
+            System.out.println("");
+            System.out.println("Results of reading objects from file: ");
             while (true) {
                 studentList = (StudentList) fileIn.readObject();
-                System.out.println("");
-                System.out.println("Results of reading objects from file: ");
                 studentList.display();
             } // end while loop
         } catch (EOFException e) { // terminates infinite while loop
