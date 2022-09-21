@@ -38,6 +38,8 @@ public class Ch16writingAndReadingObjects {
                 new FileInputStream(fileName))) {
             while (true) {
                 studentList = (StudentList) fileIn.readObject();
+                System.out.println("");
+                System.out.println("Results of reading objects from file: ");
                 studentList.display();
             } // end while loop
         } catch (EOFException e) {
